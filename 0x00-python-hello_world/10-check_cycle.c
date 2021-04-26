@@ -11,15 +11,14 @@
 
 int check_cycle(listint_t *list)
 {
-	const listint_t *l = list;
+	const listint_t *l = list->next->next;
 
-	list = list->next;
-
-	while (list != NULL)
+	while (list && l)
 	{
 		if (list == l)
 			return (1);
 
+		l = l->next->next;
 		list = list->next;
 	}
 	return (0);
