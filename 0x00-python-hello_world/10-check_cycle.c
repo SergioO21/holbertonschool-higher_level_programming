@@ -12,17 +12,16 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *l1, *l2;
+
+	l1 = l2 = list;
 	
-	l1 = list;
-	l2 = list->next->next;
-
-	while (l1 && l2)
+	while (l1 && l2->next)
 	{
-		if (l1 == l2)
-			return (1);
-
 		l1 = l1->next;
 		l2 = l2->next->next;
+
+		if (l1 == l2)
+			return (1);
 	}
 	return (0);
 }
