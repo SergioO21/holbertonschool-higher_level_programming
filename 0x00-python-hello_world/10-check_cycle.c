@@ -11,7 +11,7 @@
 
 int check_cycle(listint_t *list)
 {
-	const listint_t *l1, *l2;
+	listint_t *l1, *l2;
 	
 	l1 = list;
 	l2 = list->next->next;
