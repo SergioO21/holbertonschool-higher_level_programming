@@ -12,20 +12,15 @@
 int check_cycle(listint_t *list)
 {
 	const listint_t *l = list;
-	int n2;
-	listint_t *initial_next;
 
-	n2 = l->n;
-	initial_next = l->next;
+	list = list->next;
 
-	l = l->next;
-
-	while (l != NULL)
+	while (list != NULL)
 	{
-		if (l->n == n2 && l->next == initial_next)
+		if (list == l)
 			return (1);
 
-		l = l->next;
+		list = list->next;
 	}
 	return (0);
 }
