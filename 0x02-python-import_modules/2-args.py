@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 
-import sys
+from sys import argv
 
 
 def run():
-    argv = sys.argv
 
     length = len(argv) - 1
     i = 1
