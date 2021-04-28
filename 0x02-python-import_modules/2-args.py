@@ -2,19 +2,24 @@
 
 import sys
 
-argv = sys.argv
 
-length = len(argv) - 1
-i = 1
+def run():
+    argv = sys.argv
 
-if length == 0:
-    print("{} argmuments.".format(length))
+    length = len(argv) - 1
+    i = 1
 
-else:
-    print("{} argmuments:".format(length))
+    if length == 0:
+        print("{} argmuments.".format(length))
 
-    for args in argv:
+    else:
+        print("{} argmuments:".format(length))
 
-        if args != "./2-args.py":
-            print("{}: {}".format(i, args))
-            i += 1
+        for args in argv:
+
+            if args != "./2-args.py":
+                print("{}: {}".format(i, args))
+                i += 1
+
+if __name__ == "__main__":
+    run()
