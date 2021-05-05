@@ -10,18 +10,12 @@
 
 int is_palindrome(listint_t **head)
 {
+	int inverse[1024];
 	listint_t *list = *head;
-	int i;
+	int i = 0;
 
 	if (*head)
 	{
-		for (i = 0; list != NULL; i++)
-			list = list->next;
-
-		int inverse[i];
-
-		list = *head;
-
 		for (i = 0; list != NULL; i++)
 		{
 			inverse[i] = list->n;
