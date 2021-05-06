@@ -3,13 +3,20 @@
 
 def uniq_add(my_list=[]):
 
-    j = my_list[0] - 1
+    second_list = my_list.copy()
+    l_list = len(my_list)
     count = 0
+    option = 0
 
-    for i in my_list:
-        if i > j:
-            count += i
+    for i in range(l_list):
+        for j in range(0, i):
+            if my_list[i] == second_list[j]:
+                option = 1
+                break
 
-        j = i
+        if option == 0:
+            count += my_list[i]
+
+        option = 0
 
     return count
