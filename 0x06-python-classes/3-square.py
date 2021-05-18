@@ -6,7 +6,7 @@ class Square:
 
     """ Defines a square
     Args:
-        size (int) = Size off the square
+        size (int) = Size of the square
 
     - If size is not an integer, raise a TypeError exception
       with the message: "size must be an integer"
