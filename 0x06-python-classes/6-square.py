@@ -31,21 +31,14 @@ class Square:
 
         """ Prints in stdout the square with the character '#' """
 
-        if self.size != 0:
+        if self.size > 0:
 
-            if self.position[1] > 0:
-                for blank_lines in range(self.position[1]):
-                    print()
+            print("\n" * self.position[1], end="")
 
             for i in range(self.size):
 
-                if self.position[0] > 0:
-                    for spaces in range(self.position[0]):
-                        print(" ", end="")
-
-                for j in range(self.size):
-                    print("#", end="")
-                print()
+                print(" " * self.position[0], end="")
+                print("#" * self.size)
 
         else:
             print()
