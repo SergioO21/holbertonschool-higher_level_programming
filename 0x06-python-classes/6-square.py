@@ -55,7 +55,7 @@ class Square:
 
         """ Set the property value """
 
-        if not isinstance(value, int):
+        if type(value) != int:
             raise TypeError("size must be an integer")
 
         if value < 0:
