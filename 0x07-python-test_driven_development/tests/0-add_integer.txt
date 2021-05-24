@@ -15,36 +15,36 @@
 ==================== Principal requirements checkers ====================
 
 
-    ---------- Check that the file is executable ----------
-    >>> import os
-    >>> os.access('0-add_integer.py', os.X_OK)
-    True
+	---------- Check that the file is executable ----------
+	>>> import os
+	>>> os.access('0-add_integer.py', os.X_OK)
+	True
 
-    ---------- Check for the documentation of the module ----------
-    >>> len(__import__("0-add_integer").__doc__) > 10
-    True
+	---------- Check for the documentation of the module ----------
+	>>> len(__import__("0-add_integer").__doc__) > 10
+	True
 
-    ---------- Check for the documentation of the function ----------
-    >>> len(__import__("0-add_integer").add_integer.__doc__) > 10
-    True
+	---------- Check for the documentation of the function ----------
+	>>> len(__import__("0-add_integer").add_integer.__doc__) > 10
+	True
 
-    ---------- Check for pep8 style ----------
-    >>> os.popen("pep8 0-add_integer.py").read()
-    ''
+	---------- Check for pep8 style ----------
+	>>> os.popen("pep8 0-add_integer.py").read()
+	''
 
-    ---------- Check for a newline at the end of the file ----------
-    >>> os.popen("cat -e 0-add_integer.py | tail -1").read()[-1]
-    '\n'
+	---------- Check for a newline at the end of the file ----------
+	>>> os.popen("cat -e 0-add_integer.py | tail -1").read()[-1]
+	'\n'
 
-    ---------- Check for the file has a shebang ----------
-    >>> os.popen("cat 0-add_integer.py | head -1").read()
-    '#!/usr/bin/python3\n'
+	---------- Check for the file has a shebang ----------
+	>>> os.popen("cat 0-add_integer.py | head -1").read()
+	'#!/usr/bin/python3\n'
 
-    ---------- Check that the README file exists ----------
-    >>> cwd = os.getcwd()
-    >>> check_readme = cwd + '/README.md'
-    >>> os.path.exists(check_readme)
-    True
+	---------- Check that the README file exists ----------
+	>>> cwd = os.getcwd()
+	>>> check_readme = cwd + '/README.md'
+	>>> os.path.exists(check_readme)
+	True
 
 
 ==================== Testing with integers and floats ====================
