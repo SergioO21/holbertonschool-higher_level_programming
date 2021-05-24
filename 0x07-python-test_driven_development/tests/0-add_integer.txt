@@ -1,0 +1,132 @@
+=====================================================================================
+
+  █████                      █████                                                  
+ ░░███                      ░░███                                                   
+ ███████    ██████   █████  ███████       ██████   ██████    █████   ██████   █████ 
+░░░███░    ███░░███ ███░░  ░░░███░       ███░░███ ░░░░░███  ███░░   ███░░███ ███░░  
+  ░███    ░███████ ░░█████   ░███       ░███ ░░░   ███████ ░░█████ ░███████ ░░█████ 
+  ░███ ███░███░░░   ░░░░███  ░███ ███   ░███  ███ ███░░███  ░░░░███░███░░░   ░░░░███
+  ░░█████ ░░██████  ██████   ░░█████    ░░██████ ░░████████ ██████ ░░██████  ██████ 
+   ░░░░░   ░░░░░░  ░░░░░░     ░░░░░      ░░░░░░   ░░░░░░░░ ░░░░░░   ░░░░░░  ░░░░░░  
+
+=====================================================================================
+
+	---------- Importing the ``add_integer`` function ----------
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+==================== Principal requirements checkers ====================
+
+
+    ---------- Check that the file is executable ----------
+    >>> import os
+    >>> os.access('0-add_integer.py', os.X_OK)
+    True
+
+    ---------- Check for the documentation of the module ----------
+    >>> len(__import__("0-add_integer").__doc__) > 10
+    True
+
+    ---------- Check for the documentation of the function ----------
+    >>> len(__import__("0-add_integer").add_integer.__doc__) > 10
+    True
+
+    ---------- Check for pep8 style ----------
+    >>> os.popen("pep8 0-add_integer.py").read()
+    ''
+
+    ---------- Check for a newline at the end of the file ----------
+    >>> os.popen("cat -e 0-add_integer.py | tail -1").read()[-1]
+    '\n'
+
+    ---------- Check for the file has a shebang ----------
+    >>> os.popen("cat 0-add_integer.py | head -1").read()
+    '#!/usr/bin/python3\n'
+
+    ---------- Check that the README file exists ----------
+    >>> cwd = os.getcwd()
+    >>> check_readme = cwd + '/README.md'
+    >>> os.path.exists(check_readme)
+    True
+
+
+==================== Testing with integers and floats ====================
+
+
+	>>> add_integer(2, 3)
+	5
+
+	>>> add_integer(-10, 5)
+	-5
+
+	>>> add_integer(8, -20)
+	-12
+
+	>>> add_integer(-20, -77)
+	-97
+
+	>>> add_integer(12.25, 78.38742154)
+	90
+
+	>>> add_integer(0.1658, 94.248421)
+	94
+
+	>>> add_integer(-57.6548268, 47.84231645)
+	-10
+
+
+==================== Testing with no arguments ====================
+
+
+	>>> add_integer(None)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+
+	>>> add_integer(12)
+	110
+
+
+	>>> add_integer(None , 10)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+
+	>>> add_integer(None, None)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+
+==================== Testing with any type of data ====================
+
+
+	>>> add_integer("hello", 5)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+
+	>>> add_integer(10, "world")
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+
+
+	>>> add_integer("Hello", "World")
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+
+	>>> add_integer(5, [6, 7, 8])
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+
+
+	>>> add_integer(("hola", 5), 8)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
