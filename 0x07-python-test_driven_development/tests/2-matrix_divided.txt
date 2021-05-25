@@ -1,0 +1,161 @@
+===============================================================================
+
+████████╗███████╗███████╗████████╗     ██████╗ █████╗ ███████╗███████╗███████╗
+╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝    ██╔════╝██╔══██╗██╔════╝██╔════╝██╔════╝
+   ██║   █████╗  ███████╗   ██║       ██║     ███████║███████╗█████╗  ███████╗
+   ██║   ██╔══╝  ╚════██║   ██║       ██║     ██╔══██║╚════██║██╔══╝  ╚════██║
+   ██║   ███████╗███████║   ██║       ╚██████╗██║  ██║███████║███████╗███████║
+   ╚═╝   ╚══════╝╚══════╝   ╚═╝        ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
+                                                                              
+===============================================================================
+
+	---------- Importing the ``matrix_divided`` function ----------
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+==================== Principal requirements checkers ====================
+
+
+	---------- Check that the file is executable ----------
+	>>> import os
+	>>> os.access('2-matrix_divided.py', os.X_OK)
+	True
+
+	---------- Check for the documentation of the module ----------
+	>>> len(__import__("2-matrix_divided").__doc__) > 10
+	True
+
+	---------- Check for the documentation of the function ----------
+	>>> len(__import__("2-matrix_divided").matrix_divided.__doc__) > 10
+	True
+
+	---------- Check for pep8 style ----------
+	>>> os.popen("pep8 2-matrix_divided.py").read()
+	''
+
+	---------- Check for a newline at the end of the file ----------
+	>>> os.popen("cat -e 2-matrix_divided.py | tail -1").read()[-1]
+	'\n'
+
+	---------- Check for the file has a shebang ----------
+	>>> os.popen("cat 2-matrix_divided.py | head -1").read()
+	'#!/usr/bin/python3\n'
+
+	---------- Check that the README file exists ----------
+	>>> cwd = os.getcwd()
+	>>> check_readme = cwd + '/README.md'
+	>>> os.path.exists(check_readme)
+	True
+
+==================== Correct operation of the program ====================
+
+
+	---------- With integers ----------
+
+	>>> matrix = [
+	...	[1, 2, 3],
+	...	[4, 5, 6]
+	...	]
+	>>> matrix_divided(matrix, 2)
+	[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+
+	---------- With floats ----------
+
+	>>> matrix = [
+	...	[70.5, 20.7, 3.93],
+	...	[47.3, 5.9, 6.4],
+	...	[9.37, 71.5, 90.72]
+	...	]
+	>>> matrix_divided(matrix, 5)
+	[[14.1, 4.14, 0.79], [9.46, 1.18, 1.28], [1.87, 14.3, 18.14]]
+
+
+	---------- With a empty matrix ----------
+
+	>>> matrix = [[]]
+	>>> matrix_divided(matrix, 10)
+	[[]]
+
+
+==================== Testing with edge cases ====================
+
+
+	---------- Invalid values within the matrix ----------
+
+	>>> matrix = [
+	...	[1, 5, 6],
+	...	[2, 'f', "Hello"]
+	...	]
+	>>> matrix_divided(matrix, 3)
+	Traceback (most recent call last):
+		...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+	>>> matrix = [
+	...	[1, 5, "Hi", 'z'],
+	...	[2, 7, 6, 10]
+	...	]
+	>>> matrix_divided(matrix, 3)
+	Traceback (most recent call last):
+		...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+	---------- Rows of different size within the matrix ----------
+
+	>>> matrix = [
+	...	[1, 5, 6, 24],
+	...	[2, 7, 10]
+	...	]
+	>>> matrix_divided(matrix, 8)
+	Traceback (most recent call last):
+		...
+	TypeError: Each row of the matrix must have the same size
+
+
+	>>> matrix = [
+	...	[1, 5, 6],
+	...	[2, 7, 14, 58, 97]
+	...	]
+	>>> matrix_divided(matrix, 7)
+	Traceback (most recent call last):
+		...
+	TypeError: Each row of the matrix must have the same size
+
+
+	---------- The ``div`` parameter is not a number ----------
+
+	>>> matrix = [
+	...	[1, 5, 6],
+	...	[2, 7, 9],
+	...	[4, 9, 6],
+	...	[3, 5, 1]
+	...	]
+	>>> matrix_divided(matrix, 'z')
+	Traceback (most recent call last):
+		...
+	TypeError: div must be a number
+
+
+	>>> matrix = [
+	...	[1, 5, 6.3548, 5.1],
+	...	[2, 7.4, 9, 3.478]
+	...	]
+	>>> matrix_divided(matrix, "Holberton")
+	Traceback (most recent call last):
+		...
+	TypeError: div must be a number
+
+
+	---------- Math error ``division by 0`` ----------
+
+	>>> matrix = [
+	...	[1, 5, 6, 10.57, 24],
+	...	[2.47, 7, 9.78, 85, 71],
+	...	[7.54, 7.47, 9, 4, 8.64]
+	...	]
+	>>> matrix_divided(matrix, 0)
+	Traceback (most recent call last):
+		...
+	ZeroDivisionError: division by zero
