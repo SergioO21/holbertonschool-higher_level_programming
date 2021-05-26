@@ -1,0 +1,135 @@
+===============================================================================
+
+████████╗███████╗███████╗████████╗     ██████╗ █████╗ ███████╗███████╗███████╗
+╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝    ██╔════╝██╔══██╗██╔════╝██╔════╝██╔════╝
+   ██║   █████╗  ███████╗   ██║       ██║     ███████║███████╗█████╗  ███████╗
+   ██║   ██╔══╝  ╚════██║   ██║       ██║     ██╔══██║╚════██║██╔══╝  ╚════██║
+   ██║   ███████╗███████║   ██║       ╚██████╗██║  ██║███████║███████╗███████║
+   ╚═╝   ╚══════╝╚══════╝   ╚═╝        ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
+                                                                              
+===============================================================================
+
+	---------- Importing the ``text_indentation`` function ----------
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+==================== Principal requirements checkers ====================
+
+
+	---------- Check that the file is executable ----------
+	>>> import os
+	>>> os.access('5-text_indentation.py', os.X_OK)
+	True
+
+	---------- Check for the documentation of the module ----------
+	>>> len(__import__("5-text_indentation").__doc__) > 10
+	True
+
+	---------- Check for the documentation of the function ----------
+	>>> len(__import__("5-text_indentation").text_indentation.__doc__) > 10
+	True
+
+	---------- Check for pep8 style ----------
+	>>> os.popen("pep8 5-text_indentation.py").read()
+	''
+
+	---------- Check for a newline at the end of the file ----------
+	>>> os.popen("cat -e 5-text_indentation.py | tail -1").read()[-1]
+	'\n'
+
+	---------- Check for the file has a shebang ----------
+	>>> os.popen("cat 5-text_indentation.py | head -1").read()
+	'#!/usr/bin/python3\n'
+
+	---------- Check that the README file exists ----------
+	>>> cwd = os.getcwd()
+	>>> check_readme = cwd + '/README.md'
+	>>> os.path.exists(check_readme)
+	True
+
+
+==================== Correct operation of the program ====================
+
+
+	>>> text_indentation("             .                   ")
+	.
+	<BLANKLINE>
+
+
+	>>> text_indentation("                                ")
+
+
+	>>> text_indentation("Hello, World.                   What are u doing?")
+	Hello, World.
+	<BLANKLINE>
+	What are u doing?
+	<BLANKLINE>
+
+
+	>>> text_indentation("""The core of extensible programming is defining functions. \
+	... Python allows mandatory and optional arguments, \
+	... keyword arguments, and even arbitrary argument lists.""")
+	The core of extensible programming is defining functions.
+	<BLANKLINE>
+	Python allows mandatory and optional arguments, keyword arguments, and even arbitrary argument lists.
+	<BLANKLINE>
+
+
+	>>> text_indentation("""                       Lists (known as arrays in other languages) \
+	... are one of the compound data types that Python understands. \
+	...                     Lists can be indexed, sliced and manipulated with other built-in functions""")
+	Lists (known as arrays in other languages) are one of the compound data types that Python understands.
+	<BLANKLINE>
+	Lists can be indexed, sliced and manipulated with other built-in functions
+
+
+	>>> text_indentation("""How are u?      I am fine. \
+	...                   And u?    My mind: I am bad""")
+	How are u?
+	<BLANKLINE>
+	I am fine.
+	<BLANKLINE>
+	And u?
+	<BLANKLINE>
+	My mind:
+	<BLANKLINE>
+	I am bad
+
+
+==================== Testing with any type of data ====================
+
+
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
+
+	>>> text_indentation(5)
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
+
+	>>> text_indentation(10.78)
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
+
+	>>> text_indentation({"Adalberto": "Pinedo", "Samantha": "Polo"})
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
+
+	>>> text_indentation(("Maria", "Sara"))
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
+
+	>>> text_indentation(["Hello World", "Bye World"]) 
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
