@@ -10,6 +10,10 @@ class test_max_integer(unittest.TestCase):
     # unittests for the function ``max_integer(list=[])``
     """
 
+    def test_one_argument(self):
+        self.assertEqual(max_integer([9]), 9)
+        self.assertEqual(max_integer([-10]), -10)
+
     def test_positive_numbers(self):
         self.assertEqual(max_integer([1, 2, 3, 4, 5]), 5)
         self.assertEqual(max_integer([700, 0, 12, 6587]), 6587)
