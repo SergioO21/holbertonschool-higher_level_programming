@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""  """
+""" Add items in a list """
 
 from os import path
 from sys import argv
