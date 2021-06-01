@@ -45,4 +45,4 @@ class Student:
         """ Replaces all attributes of the Student instance. """
 
         for key, value in json.items():
-            self.key = value
+            setattr(self, key, value)
