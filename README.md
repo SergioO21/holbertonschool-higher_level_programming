@@ -1,13 +1,24 @@
-[![](https://www.holbertonschool.com/holberton-logo.png)](https://www.holbertonschool.com/)
+<div align="center">
+  <a href="https://www.holbertonschool.com/">
+    <img src="https://www.holbertonschool.com/holberton-logo.png" alt="Holberton Logo"  target="_blank">
+  </a>
+</div>
 
-# Holberton School's Low Level Programming #
 
-Welcome to the Holberton School's High Level Programming repository where I'll be uploading the answers to Holberton School's projects about programming concepts in Python and C.
+<h1 align="center"> Holberton School's Higher Level Programming </h1> 
+Welcome to the Holberton School's Higher Level Programming repository where I'll be uploading the answers to Holberton School's projects about programming concepts in Python and C.
 
-# **Table of Contents** #
+# Table of Contents
 
-| **Project**                                                                            | **Description**                                 |
-| -------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| **[0x00. Python, C - Hello, World](./0x00-python-hello_world)**                        | *Hello world in the Python world.*              |
-| **[0x01. Python, C - Conditionals, loops and functions](./0x01-python-if_else_loops_functions)** | *Conditional, loops and functions in Python.*|
-| **[0x02. Python - Import and modules](./0x02-python-import_modules)**                  | *Import and modules in Python.*                 |
+| **Project**                                                                                      | **Description**                                 |
+|--------------------------------------------------------------------------------------------------|-------------------------------------------------|
+| **[0x00. Python, C - Hello, World](./0x00-python-hello_world)**                                  | *Hello world in the Python world.*              |
+| **[0x01. Python, C - Conditionals, loops and functions](./0x01-python-if_else_loops_functions)** | *Conditional, loops and functions.*             |
+| **[0x02. Python - Import and modules](./0x02-python-import_modules)**                            | *Import and modules.*                           |
+| **[0x03. Python - Data_structures](./0x03-python-data_structures)**                              | *Data structures.*                              |
+| **[0x04. Python - More data structures](./0x04-python-more_data_structures)**                    | *More data structures.*                         |
+| **[0x05. Python - Exceptions](./0x05-python-exceptions)**                                        | *Exceptions.*                                   |
+| **[0x07. Python - Test driven development](./0x07-python-test_driven_development)**              | *Test driven development.*                      |
+| **[0x09. Python - Everything is object](./0x09-python-everything_is_object)**                    | *Everything is object concept.*                 |
+| **[0x0A. Python - Inheritance](./0x0A-python-inheritance)**                                      | *Inheritance.*                                  |
+| **[0x0B. Python - Input and output](./0x0B-python-input_output)**                                | *Input and output.*                             |
