@@ -15,7 +15,7 @@ Welcome to the Holberton School's Higher Level Programming repository where I'll
 | **[0x00. Python, C - Hello, World](./0x00-python-hello_world)**                                  | *Hello world in the Python world.*              |
 | **[0x01. Python, C - Conditionals, loops and functions](./0x01-python-if_else_loops_functions)** | *Conditional, loops and functions.*             |
 | **[0x02. Python - Import and modules](./0x02-python-import_modules)**                            | *Import and modules.*                           |
-| **[0x03. Python - Data_structures](./0x03-python-data_structures)**                              | *Data structures.*                              |
+| **[0x03. Python, C - Data_structures](./0x03-python-data_structures)**                              | *Data structures.*                           |
 | **[0x04. Python - More data structures](./0x04-python-more_data_structures)**                    | *More data structures.*                         |
 | **[0x05. Python - Exceptions](./0x05-python-exceptions)**                                        | *Exceptions.*                                   |
 | **[0x07. Python - Test driven development](./0x07-python-test_driven_development)**              | *Test driven development.*                      |
