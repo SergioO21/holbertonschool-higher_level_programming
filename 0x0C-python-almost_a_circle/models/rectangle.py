@@ -26,11 +26,13 @@ class Rectangle(Base):
         self.y = y
 
     def __str__(self):
+
         st = "[Rectangle] ({:d}) {:d}/{:d}".format(self.id, self.__x, self.__y)
         st += " - {:d}/{:d}".format(self.__width, self.__height)
         return st
 
     def to_dictionary(self):
+        """ Returns the dictionary representation of a ``Rectangle`` """
 
         r_dict = {"id": self.id, "width": self.__width}
         r_dict_2 = {"height": self.__height, "x": self.__x, "y": self.__y}
@@ -39,9 +41,14 @@ class Rectangle(Base):
         return r_dict
 
     def area(self):
+        """ Returns the area value of the ``Rectangle`` instance """
+
         return self.__width * self.__height
 
     def display(self):
+        """
+        Prints in stdout the ``Rectangle`` instance with the character '#'
+        """
 
         for y in range(self.__y):
             print()
@@ -52,6 +59,7 @@ class Rectangle(Base):
             print("#" * self.__width)
 
     def update(self, *args, **kwargs):
+        """ Assigns an argument to each attribute """
 
         if not args or len(args) == 0:
             for key, value in kwargs.items():

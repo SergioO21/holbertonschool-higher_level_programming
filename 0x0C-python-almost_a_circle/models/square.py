@@ -21,11 +21,13 @@ class Square(Rectangle):
         return st
 
     def to_dictionary(self):
+        """ Returns the dictionary representation of a ``Square`` """
 
         r_dict = {"id": self.id, "size": self.__size, "x": self.x, "y": self.y}
         return r_dict
 
     def update(self, *args, **kwargs):
+        """ Assigns an argument to each attribute """
 
         if not args or len(args) == 0:
             for key, value in kwargs.items():
