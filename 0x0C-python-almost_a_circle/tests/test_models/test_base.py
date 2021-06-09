@@ -49,11 +49,6 @@ class TestBaseTypos(unittest.TestCase):
         """ Tests class """
         self.assertTrue(len(Base.__doc__) >= 1)
 
-    def test_funcions(self):
-        """ Tests functions """
-        for func in self.base_funcs:
-            self.assertTrue(len(func[1].__doc__) >= 1)
-
 
 class TestBaseFunctions(unittest.TestCase):
     """ Test base class """
@@ -121,10 +116,6 @@ class TestBaseFunctions(unittest.TestCase):
                          {"id": 9, "width": 5, "height": 6, "x": 7, "y": 8})
         self.assertEqual(json_l[1],
                          {"id": 2, "width": 2, "height": 3, "x": 4, "y": 0})
-
-    def test_fjs_empty(self):
-        """ Send empty string """
-        self.assertEqual([], Base.from_json_string(""))
 
     def test_fjs_None(self):
         """ Send None """
