@@ -1,4 +1,4 @@
--- Creates the table force_name on your MySQL server.
+-- Creates the database hbtn_0d_usa and the table states (in the database hbtn_0d_usa).
 -- The database name will be passed as an argument of the mysql command.
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 USE hbtn_0d_usa;
