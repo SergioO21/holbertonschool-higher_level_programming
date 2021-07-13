@@ -24,4 +24,5 @@ Welcome to the Holberton School's Higher Level Programming repository where I'll
 | **[0x09. Python - Everything is object](./0x09-python-everything_is_object)**                    | *Everything is object concept.*                 |
 | **[0x0A. Python - Inheritance](./0x0A-python-inheritance)**                                      | *Inheritance.*                                  |
 | **[0x0B. Python - Input and output](./0x0B-python-input_output)**                                | *Input and output.*                             |
-| **[0x0C - Python - Almost a circle](./0x0C-python-almost_a_circle)**                             | *Classes and objects application*               |
+| **[0x0C. Python - Almost a circle](./0x0C-python-almost_a_circle)**                              | *Classes and objects application*               |
+| **[0x0D. SQL - Introduction](./0x0D-SQL_introduction)**                                          | *SQL basics.*                                   |
