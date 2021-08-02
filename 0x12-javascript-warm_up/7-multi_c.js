@@ -1,5 +1,5 @@
 #!/usr/bin/node
-//
+// Prints x times “C is fun”.
 const process = require('process');
 const args = process.argv;
 
