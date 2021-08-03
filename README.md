@@ -25,4 +25,6 @@ Welcome to the Holberton School's Higher Level Programming repository where I'll
 | **[0x0A. Python - Inheritance](./0x0A-python-inheritance)**                                      | *Inheritance.*                                  |
 | **[0x0B. Python - Input and output](./0x0B-python-input_output)**                                | *Input and output.*                             |
 | **[0x0C. Python - Almost a circle](./0x0C-python-almost_a_circle)**                              | *Classes and objects application*               |
-| **[0x0D. SQL - Introduction](./0x0D-SQL_introduction)**                                          | *SQL basics.*                                   |
+| **[0x0D. SQL - Introduction](./0x0D-SQL_introduction)**                                          | *SQL - Basics.*                                 |
+| **[0x0E. SQL - More queries](./0x0E-SQL_more_queries)**                                          | *SQL - More queries.*                           |
+| **[0x12. JavaScript - Warm up](./0x12-javascript-warm_up)**                                      | *JavaScript - Basics.*                          |
