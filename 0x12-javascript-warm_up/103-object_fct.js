@@ -1,4 +1,5 @@
 #!/usr/bin/node
+// Increments the integer value.
 const myObject = {
   type: 'object',
   value: 12
