@@ -23,7 +23,7 @@ def main():
     cur.execute("""
                 SELECT *
                 FROM states
-                WHERE name = '{}'
+                WHERE name LIKE BINARY '{}'
                 ORDER BY id ASC""".format(argv[4]))
 
     for row in cur.fetchall():
