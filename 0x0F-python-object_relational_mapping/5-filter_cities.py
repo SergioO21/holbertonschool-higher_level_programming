@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" Lists all cities from the database hbtn_0e_4_usa.
+""" Takes in the name of a state as an argument and lists
+    all cities of that state, using the database hbtn_0e_4_usa
 """
 
 from sys import argv
