@@ -2,6 +2,7 @@
 """ Prints all City objects from the database hbtn_0e_14_usa """
 
 from sys import argv
+from model_city import City
 from model_state import Base, State
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
