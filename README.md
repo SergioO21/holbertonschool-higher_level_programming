@@ -27,4 +27,6 @@ Welcome to the Holberton School's Higher Level Programming repository where I'll
 | **[0x0C. Python - Almost a circle](./0x0C-python-almost_a_circle)**                              | *Classes and objects application*               |
 | **[0x0D. SQL - Introduction](./0x0D-SQL_introduction)**                                          | *SQL - Basics.*                                 |
 | **[0x0E. SQL - More queries](./0x0E-SQL_more_queries)**                                          | *SQL - More queries.*                           |
+| **[0x0F. Python - Object_Relational_Mapping](./0x0F-python-object_relational_mapping)**          | *Python object relational mapping.*             |
 | **[0x12. JavaScript - Warm up](./0x12-javascript-warm_up)**                                      | *JavaScript - Basics.*                          |
+| **[0x13. Javascript - Objects scopes closures](./0x13-javascript_objects_scopes_closures)**      | *Javascript objects scopes closures.*           |
