@@ -14,7 +14,7 @@ def main():
     data = urllib.parse.urlencode({"email": argv[2]})
     data = data.encode("ascii")
 
-    post = urllib.request.urlopen(url, data)
+    post = urllib.request.Request(url, data)
 
     with urllib.request.urlopen(post) as response:
         print(response.read().decode("UTF-8"))
