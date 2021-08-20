@@ -7,8 +7,9 @@
 def main():
     """ Main Function """
     import requests
+    from sys import argv
 
-    req = requests.get("https://intranet.hbtn.io/status")
+    req = requests.get(argv[1])
 
     print(req.headers["X-Request-Id"])
 
