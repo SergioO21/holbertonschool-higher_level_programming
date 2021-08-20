@@ -3,14 +3,8 @@
 
 
 def find_peak(list_of_integers):
+    " Sort the list and return the last number. "
 
-    if len(list_of_integers) == 0:
-        return None
-
-    peak = list_of_integers[0]
-
-    for number in list_of_integers[1:]:
-        if number > peak:
-            peak = number
-
-    return peak
+    if list_of_integers:
+        list_of_integers.sort()
+        return list_of_integers[-1]
