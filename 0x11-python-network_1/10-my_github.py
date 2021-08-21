@@ -10,7 +10,7 @@ def main():
     from sys import argv
     from requests.auth import HTTPBasicAuth
 
-    url = "https://api.github.com/repos/{}/{}/commits"
+    url = "https://api.github.com/user"
 
     req = requests.get(url, auth=HTTPBasicAuth(argv[1], argv[2])).json()
 
