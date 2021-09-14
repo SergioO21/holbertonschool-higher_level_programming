@@ -8,12 +8,12 @@ request(argv[0], function (err, res, body) {
 
   let count = 0;
   const data = JSON.parse(body);
+  const wedgeAntilles = 'https://swapi-api.hbtn.io/api/people/18/';
 
   for (let i = 0; data.results[i] !== undefined; i++) {
-    if (data.results[i].characters.includes('https://swapi-api.hbtn.io/api/people/18/')) {
-      count += 1;
+    if (data.results[i].characters.includes(wedgeAntilles)) {
+      count++;
     }
   }
-
   console.log(count);
 });
