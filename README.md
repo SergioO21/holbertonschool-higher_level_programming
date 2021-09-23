@@ -6,7 +6,7 @@
 
 
 <h1 align="center"> Holberton School's Higher Level Programming </h1> 
-Welcome to the Holberton School's Higher Level Programming repository where I'll be uploading the answers to Holberton School's projects about programming concepts in Python, JavaScript and C.
+Welcome to the Holberton School's Higher Level Programming repository where I'll be uploading the answers to Holberton School's projects about programming concepts in Python, JavaScript, Shell and C.
 
 # Table of Contents
 
